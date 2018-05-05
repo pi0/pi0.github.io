@@ -1,0 +1,231 @@
+{
+  "basics": {
+    "name": "Pooya Parsa",
+    "label": "Technical Advisor",
+    "picture": "https://avatars0.githubusercontent.com/u/5158436?v=4",
+    "email": "pyapar@gmail.com",
+    "phone": "(919) 5085164",
+    "website": "https://pi0.ir",
+    "summary": "Full Stack JS Developer. Technical Adviser  and Opensource Enthusiast.",
+    "location": {
+      "address": "Tehran, Sattarkhan ",
+      "postalCode": "144",
+      "city": "Tehran",
+      "countryCode": "IR",
+      "region": "Tehran"
+    },
+    "profiles": [
+      {
+        "network": "Github",
+        "username": "pi0",
+        "url": "https://github.com/pi0"
+      },
+      {
+        "network": "Twitter",
+        "username": "_pi0_",
+        "url": "https://twitter.com/_pi0_"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "pooyaparsa",
+        "url": "https://www.linkedin.com/in/pooyaparsa/"
+      },
+      {
+        "network": "Telegram",
+        "username": "pooyaparsa",
+        "url": "https://t.me/pooyaparsa"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "P.A.E Co",
+      "position": "Server Administrator",
+      "website": "",
+      "startDate": "2012-10-01",
+      "endDate": "2013-12-01",
+      "summary": "",
+      "highlights": []
+    },
+    {
+      "company": "IIG (Iranian Internet Group)",
+      "position": "Backend Developer",
+      "website": "",
+      "startDate": "2014-02-01",
+      "endDate": "2014-04-01",
+      "summary": "",
+      "highlights": []
+    },
+    {
+      "company": "RAPNA",
+      "position": "Technical Advisor and Web Developer",
+      "website": "",
+      "startDate": "2014-07-01",
+      "endDate": "2014-10-01",
+      "summary": "",
+      "highlights": []
+    },
+    {
+      "company": "Pendra System Fadak",
+      "position": "Hardware and Software engineer",
+      "website": "",
+      "startDate": "2015-06-01",
+      "endDate": "2015-10-01",
+      "summary": "",
+      "highlights": []
+    },
+    {
+      "company": "Amirkabir University of Technology",
+      "position": "Server Administrator",
+      "website": "",
+      "startDate": "2014-01-01",
+      "endDate": "",
+      "summary": "",
+      "highlights": []
+    },
+    {
+      "company": "Fandogh",
+      "position": "Co-Founder",
+      "website": "https://fandogh.org",
+      "startDate": "2014-01-01",
+      "endDate": "",
+      "summary": "",
+      "highlights": []
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Linux Festival",
+      "position": "Organizer and Presenter",
+      "website": "",
+      "startDate": "",
+      "endDate": "",
+      "summary": "",
+      "highlights": []
+    },
+    {
+      "organization": "Vue.js",
+      "position": "Community Partner",
+      "website": "",
+      "startDate": "",
+      "endDate": "",
+      "summary": "",
+      "highlights": []
+    }
+  ],
+  "education": [
+    {
+      "institution": "Amirkabir University of Technology",
+      "area": "Information Technology",
+      "studyType": "Bachelor",
+      "startDate": "2011-06-01",
+      "endDate": "2014-01-01",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "Allameh Helli 4",
+      "area": "Tehran",
+      "studyType": "",
+      "startDate": "2011-01-01",
+      "endDate": "2013-01-01",
+      "gpa": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Web Development",
+      "level": "",
+      "keywords": [
+        "HTML",
+        "CSS/SASS",
+        "Javascript",
+        "React",
+        "Vue",
+        "Meteor",
+        "GraphQL",
+        "PWA"
+      ]
+    },
+    {
+      "name": "Backend Development",
+      "level": "",
+      "keywords": [
+        "PHP",
+        "Python",
+        "Node.js"
+      ]
+    },
+    {
+      "name": "DevOps ",
+      "level": "",
+      "keywords": [
+        "Windows Server",
+        "Virtualization",
+        "ESXi",
+        "VCenter",
+        "Linux/Ubuntu/CentOS",
+        "LXC",
+        "Docker",
+        "Apache",
+        "Nginx"
+      ]
+    },
+    {
+      "name": "Sys/Net Admin",
+      "level": "",
+      "keywords": [
+        "WDS (Windows Deployment Services)",
+        "LDAP/Active Directory",
+        "Hardware maintenance",
+        "Cisco",
+        "Mikrotik"
+      ]
+    },
+    {
+      "name": "Mobile Development",
+      "level": "",
+      "keywords": [
+        "Android (Java)",
+        "NDK",
+        "React Native",
+        "Hybrid Apps"
+      ]
+    },
+    {
+      "name": "Database",
+      "level": "",
+      "keywords": [
+        "MySQL",
+        "Oracle",
+        "MSSQL",
+        "Mongo",
+        "Redis"
+      ]
+    },
+    {
+      "name": "Security",
+      "level": "",
+      "keywords": [
+        "Web Security",
+        "Network Security",
+        "Reverse Engineering"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Persian",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": ""
+    }
+  ],
+  "interests": [],
+  "references": []
+}
