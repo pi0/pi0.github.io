@@ -1,0 +1,4 @@
+#!/bin/bash
+
+yarn resume export -F -t stackoverflow resume.html
+yarn resume export -F -t stackoverflow resume.pdf
