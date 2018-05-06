@@ -6,10 +6,10 @@
     "email": "pyapar@gmail.com",
     "phone": "(919) 5085164",
     "website": "https://pi0.ir",
-    "summary": "Full Stack JS Developer. Technical Adviser  and Opensource Enthusiast.",
+    "summary": "Full Stack Developer. Technical Adviser and OpenSource Enthusiast.",
     "location": {
-      "address": "Tehran, Sattarkhan ",
-      "postalCode": "144",
+      "address": "Tehran, Sattarkhan",
+      "postalCode": "1443733831",
       "city": "Tehran",
       "countryCode": "IR",
       "region": "Tehran"
@@ -44,7 +44,7 @@
       "website": "",
       "startDate": "2012-10-01",
       "endDate": "2013-12-01",
-      "summary": "",
+      "summary": "Working on hosting solutions (CPanel and OpenSource alternatives)",
       "highlights": []
     },
     {
@@ -53,7 +53,7 @@
       "website": "",
       "startDate": "2014-02-01",
       "endDate": "2014-04-01",
-      "summary": "",
+      "summary": "BodoFood rewrite with symphony framework. DB analytics.",
       "highlights": []
     },
     {
@@ -62,7 +62,7 @@
       "website": "",
       "startDate": "2014-07-01",
       "endDate": "2014-10-01",
-      "summary": "",
+      "summary": "Reaserch and Reverse engineering about augmented reality. Develop and deploy a SMS based VAS service with managenment panel.",
       "highlights": []
     },
     {
@@ -71,7 +71,7 @@
       "website": "",
       "startDate": "2015-06-01",
       "endDate": "2015-10-01",
-      "summary": "",
+      "summary": "Design, develop and setup a RFID software and hardware soloution for Ahvaz waste management organization.",
       "highlights": []
     },
     {
@@ -79,8 +79,8 @@
       "position": "Server Administrator",
       "website": "",
       "startDate": "2014-01-01",
-      "endDate": "",
-      "summary": "",
+      "endDate": "2017-09-21",
+      "summary": "Servers managenment for both CEIT and CIC departenments. WDS and AD administrator.",
       "highlights": []
     },
     {
@@ -89,8 +89,20 @@
       "website": "https://fandogh.org",
       "startDate": "2014-01-01",
       "endDate": "",
-      "summary": "",
-      "highlights": []
+      "summary": "CoFounder. CTO and Technical adviser.",
+      "highlights": [
+        "Nargil",
+        "RFConnect",
+        "EventBin",
+        "Tikio",
+        "Boofeh",
+        "Baziness",
+        "Chavosh",
+        "Shenasa SSO (AUT CIC)",
+        "Internet Captive Portal (AUT CIC)",
+        "Online TV (AUT CIC)",
+        "Ticketing System (AUT CIC)",
+      ]
     }
   ],
   "volunteer": [
@@ -98,7 +110,7 @@
       "organization": "Linux Festival",
       "position": "Organizer and Presenter",
       "website": "",
-      "startDate": "",
+      "startDate": "2014-04-30",
       "endDate": "",
       "summary": "",
       "highlights": []
@@ -107,7 +119,7 @@
       "organization": "Vue.js",
       "position": "Community Partner",
       "website": "",
-      "startDate": "",
+      "startDate": "2017-05-30",
       "endDate": "",
       "summary": "",
       "highlights": []
@@ -116,7 +128,7 @@
   "education": [
     {
       "institution": "Amirkabir University of Technology",
-      "area": "Information Technology",
+      "area": "Computer Engineering",
       "studyType": "Bachelor",
       "startDate": "2011-06-01",
       "endDate": "2014-01-01",
@@ -141,9 +153,11 @@
       "level": "",
       "keywords": [
         "HTML",
-        "CSS/SASS",
+        "CSS",
+        "SASS",
         "Javascript",
         "React",
+        "Angular 1",
         "Vue",
         "Meteor",
         "GraphQL",
@@ -167,7 +181,11 @@
         "Virtualization",
         "ESXi",
         "VCenter",
-        "Linux/Ubuntu/CentOS",
+        "Linux",
+        "Ubuntu",
+        "CentOS",
+        "ArchLinux",
+        "Free BSD",
         "LXC",
         "Docker",
         "Apache",
@@ -175,12 +193,13 @@
       ]
     },
     {
-      "name": "Sys/Net Admin",
+      "name": "SysAdmin",
       "level": "",
       "keywords": [
-        "WDS (Windows Deployment Services)",
-        "LDAP/Active Directory",
-        "Hardware maintenance",
+        "Windows Deployment Services (WDS)",
+        "Active Directory",
+        "Open LDAP",
+        "Server Maintenance",
         "Cisco",
         "Mikrotik"
       ]
