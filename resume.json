@@ -103,7 +103,16 @@
         "Online TV (AUT CIC)",
         "Ticketing System (AUT CIC)"
       ]
-    }
+    },
+      {
+        "company": "Alibaba Travels Co",
+        "position": "",
+        "website": "https://alibaba.ir",
+        "startDate": "2018-01-20",
+        "endDate": "",
+        "summary": "Working with DevOps and Indra teams",
+        "highlights": []
+      }
   ],
   "volunteer": [
     {
