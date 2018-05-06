@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "html-pdf": "^2.2.0",
     "jsonresume-theme-stackoverflow": "^1.4.0",
     "resume-cli": "^0.4.19"
   },
