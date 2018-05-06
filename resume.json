@@ -1,15 +1,15 @@
 {
   "basics": {
     "name": "Pooya Parsa",
-    "label": "Technical Advisor",
+    "label": "Full Stack Developer",
     "picture": "https://avatars0.githubusercontent.com/u/5158436?v=4",
     "email": "pyapar@gmail.com",
     "phone": "(919) 5085164",
     "website": "https://pi0.ir",
-    "summary": "Full Stack Developer. Technical Adviser and OpenSource Enthusiast.",
+    "summary": "Technical adviser and open-source enthusiast.",
     "location": {
-      "address": "Tehran, Sattarkhan",
-      "postalCode": "1443733831",
+      "address": "",
+      "postalCode": "",
       "city": "Tehran",
       "countryCode": "IR",
       "region": "Tehran"
@@ -44,7 +44,7 @@
       "website": "",
       "startDate": "2012-10-01",
       "endDate": "2013-12-01",
-      "summary": "Working on hosting solutions (CPanel and OpenSource alternatives)",
+      "summary": "Working on hosting solutions (Cpanel and OpenSource alternatives)",
       "highlights": []
     },
     {
@@ -53,17 +53,21 @@
       "website": "",
       "startDate": "2014-02-01",
       "endDate": "2014-04-01",
-      "summary": "BodoFood rewrite with symphony framework. DB analytics.",
+      "summary": "BodoFood rewrite with symfony framework. DB analytics.",
       "highlights": []
     },
     {
       "company": "RAPNA",
-      "position": "Technical Advisor and Web Developer",
+      "position": "Technical Adviser and Web Developer",
       "website": "",
       "startDate": "2014-07-01",
       "endDate": "2014-10-01",
-      "summary": "Reaserch and Reverse engineering about augmented reality. Develop and deploy a SMS based VAS service with managenment panel.",
-      "highlights": []
+      "summary": "",
+      "highlights": [
+        "Research about augmented reality",
+        "Develop and deploy a SMS based VAS service with managenment panel",
+        "Reverse engineering native ARM binaries"
+      ]
     },
     {
       "company": "Pendra System Fadak",
@@ -71,7 +75,7 @@
       "website": "",
       "startDate": "2015-06-01",
       "endDate": "2015-10-01",
-      "summary": "Design, develop and setup a RFID software and hardware soloution for Ahvaz waste management organization.",
+      "summary": "Design, develop and setup a RFID software and hardware solution for Ahvaz waste management organization.",
       "highlights": []
     },
     {
@@ -80,8 +84,11 @@
       "website": "",
       "startDate": "2014-01-01",
       "endDate": "2017-09-21",
-      "summary": "Servers managenment for both CEIT and CIC departenments. WDS and AD administrator.",
-      "highlights": []
+      "summary": "",
+      "highlights": [
+        "Servers managenment for CEIT and CIC departenments.",
+        "WDS and AD administrator."
+      ]
     },
     {
       "company": "Fandogh",
@@ -89,7 +96,7 @@
       "website": "https://fandogh.org",
       "startDate": "2014-01-01",
       "endDate": "",
-      "summary": "CoFounder. CTO and Technical adviser.",
+      "summary": "CTO and Technical adviser",
       "highlights": [
         "Nargil",
         "RFConnect",
@@ -166,7 +173,7 @@
         "SASS",
         "Javascript",
         "React",
-        "Angular 1",
+        "Angular 1.x",
         "Vue",
         "Meteor",
         "GraphQL",
@@ -179,7 +186,8 @@
       "keywords": [
         "PHP",
         "Python",
-        "Node.js"
+        "Node.js",
+        "Java"
       ]
     },
     {
