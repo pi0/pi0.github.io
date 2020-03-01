@@ -1,4 +1,4 @@
 #!/bin/bash
 
-yarn resume export -F -t stackoverflow resume.html
+yarn resume export -t paper resume.html
 node ./build-pdf.js

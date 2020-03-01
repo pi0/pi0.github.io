@@ -1,1257 +1,794 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
+<head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
   <title>Pooya Parsa</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <style>
-  /********************************************
-* 	reset from
-* 	http://meyerweb.com/eric/tools/css/reset/
-*******************************************/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    vertical-align: baseline;
+  <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <style>body, html {
+  padding-top:2.5em;
+  margin:0;
+  background-color:#fafafa;
 }
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+.note {
+  display:block;
+  position: absolute;
+  top:10px;
+  left:10px;
+
+  font-family: "Open Sans";
+  font-size: 0.6em;
+}
+
+.new {
+  background-color: #81C784;
+
+  border: 1px solid #757575;
+  padding: 1px;
+  border-radius: 4px;
+
+}
+
+/* Header */
+
+header {
+  width:100%;
+  vertical-align: middle;
+  text-align: center;
+ 
+}
+
+.header-content {
+  display: inline-block;
+}
+
+.pic {
+  margin: 0 auto;
+  margin-top:-2.5em;
+  
+  border-radius:10em;
+  height:4em;
+  width:4em;
+  
+  border: 2px solid #e0e0e0;
+  transition : all 0.5s linear;
+  
+}
+
+@-webkit-keyframes wiggle {
+  0%   {
+    transform: rotate(0deg);
+  }
+  25%  {
+    transform: rotate(-30deg);
+  }
+  50%  {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.pic:hover {
+  /*Webkit fix*/
+  -webkit-transform: translateZ(0);
+  
+  cursor:pointer;
+  
+  -webkit-animation: wiggle 0.7s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+}
+
+.header-text {
+  margin-top:0.5em;
+  margin-left:1em;
+}
+
+header p {
+  text-align:center;
+  font-family: "Merriweather";
+  
+  margin:0;
+  
+  color: #212121;
+}
+
+.first-name {
+   font-size: 1.05em;
+}
+
+.subtitle {
+  font-family: "Merriweather";
+  padding-top:.3em;
+  font-size:0.55em;
+  font-weight:500;
+  color: #424242;
+}
+
+/* Information */
+
+.paper {
+  margin: 0 auto;
+  margin-bottom:1em;
+  
+  background-color:white;
+  width:60%;
+  
+  padding:0.5em 0 0.5em 0;
+  
+  border-top: 1px solid #e0e0e0;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  border-bottom: 3px solid #e0e0e0;
+  border-radius:3px;
+}
+
+@media(max-width:992px) {
+  .paper {
+    width:80%;
+  }
+}
+
+/* Content Part */
+
+.content-wrapper {
+  padding-right:7.25%;
+}
+
+.content {
+  display:table;
+  width:100%;
+  
+  padding-top:1.5em;
+  
+  /*border-top: 1px solid #eeeeee;*/
+}
+
+.content:last-child {
+  margin-bottom: 2em;
+}
+
+body > div > article > div > section:last-child {
+  padding-bottom:1.5em;
+}
+
+.row {
+    display:table-row;
+}
+.row div {
+    display:table-cell;
+}
+
+.content-cat {
+  font-family: "Merriweather";
+  font-variant:small-caps;
+  font-weight:300;
+  letter-spacing: 1px;
+  
+  color: #212121;
+  
+  font-size:0.975em;
+  
+  text-align:center;
+  vertical-align:middle;
+
+  padding-left:6.66%;
+  width:30%;
+}
+
+.content-cat p {
+  font-size:0.55em;
+  font-weight:600;
+  
+  margin-bottom:0;
+}
+
+.content-text {
+  border-left:1px solid #e0e0e0;
+  transition: border 0.66s ease-in;
+}
+
+.big-text {
+  vertical-align:top;
+}
+
+.content-text ul {
+  padding:0;
+  margin:0;
+  margin-top:0.15em;
+  
+  width:85%;
+  margin-left:1.5em;
+}
+
+.content-text ul:last-child {
+  margin-bottom:0.5em;
+}
+
+.content-text ul li {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  
+  display:inline-block;
+  
+}
+
+.content-text ul li:first-child {
+  width:35%;
+  
+  color: #424242;
+  
+  font-weight:600;
+}
+
+.content-text ul li a, div.content-text.work-listing.education-listing > p > strong > a {
+  text-decoration: none;
+  color: #0277bd;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.work-listing p {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  
+  color: #424242;
+  
+  margin-left:2em;
+  margin-top:0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.work-listing.education-listing > p:nth-child(2) {
+  margin-top:0.25em;
+}
+
+.work-listing .highlight {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+  
+  color: #424242;
+  
+  margin-left:3.25em;
+  padding-left:0.5em;
+  
+  border-left:1px solid #e0e0e0;
+  
+}
+
+.education-listing > .heading {
+  font-weight:600;
+  
+  margin-top:0.75em;
+  margin-left:2em;
+}
+
+.education-listing > .highlight {
+  margin-left:3.25em;
+}
+
+.highlight {
+  transition: border .33s ease-in;
+}
+
+.profiles-listing ul li, .profiles-listing ul li:first-child {
+  width:32%;
+  font-weight: normal;
+}
+
+.work-content, .education-content {
+  padding-top: .75em;
+}
+
+section.content.education-content > div > div.content-cat {
+  vertical-align: top;
+}
+
+div.content-text.skills-listing > p {
+  font-family: "Open Sans";
+  font-size:0.7em;
+  font-weight:400;
+
+  margin-left: 2em;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.skills-listing > p > {
+  color:#212121;
+}
+
+@media screen and (max-width: 600px) {
+  body, html {
+    padding-top: 30px;
+  }
+
+  .paper {
+    width:95%;
+  }
+
+  .row div {
     display: block;
-}
+  }
 
-body {
-    line-height: 1;
-}
-
-ol,
-ul {
-    list-style: none;
-}
-
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-
-/****************
-*	COMMONS
-****************/
-
-body,
-html {
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-size: 13px;
-    color: #40484f;
-    font-weight: 400;
-    letter-spacing: 0;
-    line-height: 1.46153846;
-    text-align: left;
-    -webkit-text-size-adjust: 100%;
-}
-
-p {
-    display: block;
-    margin-bottom: 1.3em;
-}
-
-a {
-    color: #0095ff;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #0c65a5;
-    text-decoration: underline;
-}
-
-ul {
-    margin-top: 1rem;
-}
-
-li {
-    list-style-type: square;
-    list-style-position: outside;
-    margin-left: 1.3em;
-}
-
-.highlights>li>p {
-    margin-bottom: 0.5em;
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-h2 {
-    font-size: 1.67rem;
-}
-
-h3 {
-    font-size: 1.27rem;
-}
-
-em {
-    color: #757575;
-}
-
-blockquote {
-    margin-bottom: 1em;
-}
-
-strong {
-    font-weight: 700;
-}
-
-
-/* main container */
-
-#resume {
-    padding: 1rem;
-    margin-top: 2rem;
-}
-
-
-/* every section wrapper */
-
-.section {
-    margin-bottom: 1rem;
-}
-
-section .location {
-    margin-right: .5em;
-    color: #606d76;
-    font-weight: 700;
-}
-
-#contact {
-    margin-top: .5rem;
-}
-
-#profiles .item {
-    padding: 0;
-}
-
-#header>#profiles,
-#header>#contact,
-#skills,
-#languages,
-#interests {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    -webkit-justify-content: flex-start;
-    justify-content: flex-start;
-}
-
-#header>div {
-    line-height: 1.5;
-}
-
-#header>div>div {
-    margin-right: 1.2em;
-}
-
-#header h1.name {
-    font-size: 2.8rem;
-    font-weight: 100;
-    line-height: 100%;
-}
-
-#header h2.label {
-    color: #202931;
-    font-size: 1.47rem;
-    font-weight: 300;
-}
-
-#header .picture {
-    width: 11em;
-    float: right;
-    border-radius: 4px;
-}
-
-.main-summary {
-    background: #f1f8ff;
-    padding: 1.2em 1em;
-    margin-top: 1rem;
-}
-
-.main-summary p {
-    margin: .15em 0 0;
-}
-
-h2.section-title {
-    display: inline-block;
-    background: #fff;
-    padding: 0 1em 0.3em 0;
-    color: #ff6d1f;
-    text-transform: uppercase;
-    font-weight: 600;
-    border: none;
-    font-size: .9rem;
-}
-
-.section>header {
-    position: relative;
-}
-
-.fa {
-    margin-right: 0.25em;
-}
-
-.section>header::after {
-    position: absolute;
-    left: 0;
-    top: .7em;
-    height: 1px;
-    background: #ccc;
-    content: "";
+  .content-cat {
     width: 100%;
-    z-index: -100;
-    display: block;
-}
+  }
 
-.section.main-summary>section {
-    margin: 0;
-}
+  .content-text ul li {
+    width: 100%;
+  }
 
-.section>section>header {
-    font-size: 1.38rem;
-    position: relative;
-    margin-top: .7em;
-}
-
-.section>section>header:first-of-type {
-    margin: 0;
-}
-
-.section>section>header .space-left {
-    position: absolute;
-    left: -1.56rem;
-    top: 5px;
-    color: #aaa;
-    line-height: 1;
-    opacity: 0;
-}
-
-.position,
-.company,
-.organization,
-.institution,
-.date,
-.area,
-.studyType,
-.title,
-.awarder {
-    display: inline;
-}
-
-.position,
-.studyType,
-.area,
-.title,
-.language,
-.name {
-    font-weight: 600;
-}
-
-.company::before,
-.institution::before,
-.organization::before,
-.awarder::before {
-    content: "at "
-}
-
-.company,
-.institution,
-.organization,
-.awarder {
-    color: #606d76;
-    font-weight: 400;
-}
-
-.section header .date {
-    font-size: 1rem;
-    display: inline-table;
-    padding: .1em 0;
-    font-weight: 600;
-}
-
-ul.keywords,
-ul.courses {
-    margin-top: .5em;
-}
-
-ul.keywords li,
-ul.courses li {
-    display: inline-block;
-    margin: 2px 2px 2px 0;
-    padding: 4px 5px 5px;
-    font-size: .9rem;
-    line-height: 1;
-    text-transform: lowercase;
-    color: #3e6d8e;
-    background-color: #dfeaf1;
-    border: 0 solid #dfeaf1;
-    white-space: nowrap;
-}
-
-ul.keywords li:hover,
-ul.courses li:hover {
-    background: #dfeaf0;
-}
-
-.item {
-    padding: .5em 0;
-}
-
-.gpa {
-    padding-bottom: .5em;
-}
-
-.fa.social {
-    font-size: 1.1em;
-}
-
-
-/* Social Media Brand Colors */
-
-.google-plus {
-    color: #dd4b39;
-}
-
-.tumblr {
-    color: #32506d;
-}
-
-.foursquare {
-    color: #0072b1;
-}
-
-.facebook {
-    color: #3b5998;
-}
-
-.linkedin {
-    color: #007bb6;
-}
-
-.pinterest {
-    color: #cb2027;
-}
-
-.dribbble {
-    color: #ea4c89;
-}
-
-.instagram {
-    color: #517fa4;
-}
-
-.twitter {
-    color: #00aced;
-}
-
-.soundcloud {
-    color: #ff3a00;
-}
-
-.wordpress {
-    color: #21759b;
-}
-
-.youtube {
-    color: #bb0000;
-}
-
-.github {
-    color: #171515;
-}
-
-.stack-overflow {
-    color: #828386;
-    position: relative;
-}
-
-.flickr {
-    color: #ff0084;
-}
-
-.stack-overflow::after {
-    position: absolute;
-    left: 0;
-    content: '\f16c';
-    color: #f68a1f;
-    overflow: hidden;
-    height: 100%;
-}
-
-.telegram {
-    color: #2291c3;
-}
-
-#languages .item,
-#skills .item,
-#interests .item {
-    width: 15em;
-    padding: 0 .5em .5em 0;
-    border-bottom: none;
-}
-
-#skills .item {
-    width: 16em;
-}
-
-#skills .item .keywords {
-    width: 15em;
-}
-
-
-/* Skill chart */
-
-.level {
-    margin-bottom: .5em;
-}
-
-.level .bar {
-    border: 1px solid #ddd;
-    display: block;
-    width: 10em;
-    height: 5px;
-    position: relative;
-}
-
-.level .bar::after {
-    position: absolute;
-    content: " ";
-    top: 0;
-    left: 0;
-    background: black;
-    height: 5px;
-}
-
-.level.beginner .bar::after {
-    background: #EB5F51;
-    width: 2.5em;
-}
-
-.level.intermediate .bar::after {
-    background: #ffdf1f;
-    width: 5em;
-}
-
-.level.advanced .bar::after,
-.level.fluent .bar::after {
-    background: #5CB85C;
-    width: 7.5em;
-}
-
-.level.master .bar::after,
-.level.native.speaker .bar::after {
-    background: #59C596;
-    width: 10em;
-}
-
-#references .item {
-    padding-left: .5em;
-    border-left: 5px solid #ff6d1f;
-}
-
-.toggle-item {
-  visibility: hidden;
-}
-
-/******************
-*	HELPER CLASSES
-******************/
-
-.clear::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.display {
-    display: block;
-    opacity: 1 !important;
-}
-
-.margin1 {
-    margin-bottom: .5rem;
-}
-
-
-/****************
-*		TABLET
-****************/
-
-@media screen and (min-width: 602px) {
-    #resume {
-        width: 80%;
-        margin: 0 auto;
-    }
-}
-
-
-/****************
-*		LAPTOP
-****************/
-
-@media screen and (min-width: 1025px) {
-    li {
-        margin-left: 1.5em;
-    }
-    #resume {
-        width: 820px;
-        margin: 2rem auto;      
-    }
-    .section>section>header .space-left {
-        opacity: 1;
-        cursor: pointer;
-    }
-    .section>section {
-        margin-left: 1.67rem;
-    }
-    .toggle-item {
-        transform: translate(-9999px);
-    }
-    .toggle-item+label {
-        display: block;
-        margin-top: -16px;
-    }
-    .toggle-item:checked+label:after {
-        content: '\f0d7';
-    }
-    .toggle-item+label:after {
-        float: left;
-        cursor: pointer;
-        margin-left: -20px;
-        color: #aaa;
-        font-size: 16px;
-        content: '\f0da';
-        font-family: Fontawesome;
-    }
-    .toggle-item~.item {
-        height: 0;
-        opacity: 0;
-    }
-    .toggle-item:checked~.item {
-        height: auto;
-        opacity: 1;
-        transition: all .5s linear;
-    }
-    .company::before,
-    .institution::before,
-    .organization::before,
-    .awarder::before {
-        content: "| ";
-    }
-    .header-left {
-        float: left;
-        width: 70%;
-        word-break: normal;
-    }
-    .section header .date {
-        float: right;
-        padding: .2em;
-    }
-    .display {
-        display: none;
-    }
-    .display:not(.none) {
-        display: block;
-    }
-}
-
-@media print {
-    #resume {
-        margin: 0;
-        padding: 0;
-        -ms-word-wrap: break-word;
-        word-wrap: break-word;
-        line-height: 1.3;
-        /*font-family: Arial, Georgia, "Lucida Grande", sans-serif;*/
-    }
-    @page {
-        margin: 1cm 1.4cm;
-    }
-    .item-count {
-        display: none;
-    }
-    .company::before,
-    .institution::before,
-    .organization::before,
-    .awarder::before {
-        content: "at ";
-    }
-    .main-summary {
-        padding: 2rem 0;
-    }
-    .section {
-        margin: .8rem 0;
-        padding: 0;
-    }
-    .section header {
-        padding-bottom: .15rem;
-    }
-    .section .location {
-        padding-bottom: .15rem;
-    }
-    .stack-overflow::after {
-        content: "";
-    }
-    .fa.social {
-        color: #828386;
-    }
-    ul {
-        margin-top: .4em;
-    }
-    ul,
-    li {
-        padding: 0;
-    }
-    ul.keywords li,
-    ul.courses li {
-        margin: 0;
-        padding: 0;
-        font-size: .8rem;
-        text-transform: lowercase;
-    }
-    ul.keywords li::after,
-    ul.courses li::after {
-        padding: 0 0 0 .1rem;
-        content: " |";
-    }
-    ul.keywords::before,
-    ul.courses::before {
-        font-size: .8rem;
-        font-weight: 600;
-    }
-    ul.keywords::before {
-        content: "Skills acquired: ";
-    }
-    #skills .keywords::before {
-        content: '';
-    }
-    .section p {
-        margin: 0;
-        padding: 0;
-    }
-    ul.courses::before {
-        content: "Major courses: ";
-    }
-    ul.keywords li:last-of-type::after,
-    ul.courses li:last-of-type::after {
-        content: "";
-    }
-    .level em {
-        font-style: normal;
-        padding: .1em 0;
-    }
-    .level .bar {
-        display: none;
-    }
-    #profiles .item {
-        padding: 0;
-    }
-    .item.display {
-        display: block;
-        opacity: 1 !important;
-    }
-}
-
-  </style>
+  .content-text ul li:first-child {
+    width: 100%;
+  }
   
-  </head>
-  <body>
-  
-  <div id="resume">
-    	<header id="header" class="clear">
-    		<img class="picture" src="https://avatars0.githubusercontent.com/u/5158436?v&#x3D;4" alt="Pooya Parsa" />
-    		<div class="middle">
-    			<h1 class="name">Pooya Parsa</h1>
-    			<h2 class="label">Full Stack Developer</h2>
-    		</div>
-    		
-    		<span class="location">
-    			<span class="city">Tehran,</span> 
-    			<span class="region">Tehran</span> 
-    			<span class="countryCode">IR</span> 
-    		</span>
-    		
-    
-    		<div id="contact">
-    			<div class="website">
-    				<span class="fa fa-external-link"></span>
-    				<a target="_blank" target="_blank" href="https://pi0.ir">https://pi0.ir</a>
-    			</div>
-    			<div class="email">
-    				<span class="fa fa-envelope-o"></span>
-    				<a href="mailto:pyapar@gmail.com">pyapar@gmail.com</a>
-    			</div>
-    			<div class="phone">
-    				<span class="fa fa-mobile"></span>
-    				<a href="tel:(919) 5085164">(919) 5085164</a>
-    			</div>
-    		</div>
-    
-    		<div id="profiles">
-    			<div class="item">
-    				<div class="username">
-    					<span class="fa fa-github github social"></span>
-    					<span class="url">
-    						<a target="_blank" href="https://github.com/pi0">pi0</a>
-    					</span> 
-    				</div>
-    			</div>
-    			<div class="item">
-    				<div class="username">
-    					<span class="fa fa-twitter twitter social"></span>
-    					<span class="url">
-    						<a target="_blank" href="https://twitter.com/_pi0_">_pi0_</a>
-    					</span> 
-    				</div>
-    			</div>
-    			<div class="item">
-    				<div class="username">
-    					<span class="fa fa-linkedin linkedin social"></span>
-    					<span class="url">
-    						<a target="_blank" href="https://www.linkedin.com/in/pooyaparsa/">pooyaparsa</a>
-    					</span> 
-    				</div>
-    			</div>
-    			<div class="item">
-    				<div class="username">
-    					<span class="fa fa-telegram telegram social"></span>
-    					<span class="url">
-    						<a target="_blank" href="https://t.me/pooyaparsa">pooyaparsa</a>
-    					</span> 
-    				</div>
-    			</div>
-    		</div>
-    	</header>
-    
-    	<section class="section main-summary">
-    		<section>
-    			<div><p>Technical adviser and open-source enthusiast.</p></div>
-    		</section>
-    	</section>
-    
-    <section class="section margin1">
-    	<header>
-    		<h2 class='section-title'>Skills</h2>
-    	</header>
-    	<section id="skills">
-    		<div class="item">
-    			<h3 class="name">
-    				Web Development
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>HTML</li>
-    				<li>CSS</li>
-    				<li>SASS</li>
-    				<li>Javascript</li>
-    				<li>React</li>
-    				<li>Angular 1.x</li>
-    				<li>Vue</li>
-    				<li>Meteor</li>
-    				<li>GraphQL</li>
-    				<li>PWA</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Backend Development
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>PHP</li>
-    				<li>Python</li>
-    				<li>Node.js</li>
-    				<li>Java</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				DevOps 
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>Windows Server</li>
-    				<li>Virtualization</li>
-    				<li>ESXi</li>
-    				<li>VCenter</li>
-    				<li>Linux</li>
-    				<li>Ubuntu</li>
-    				<li>CentOS</li>
-    				<li>ArchLinux</li>
-    				<li>Free BSD</li>
-    				<li>LXC</li>
-    				<li>Docker</li>
-    				<li>Apache</li>
-    				<li>Nginx</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				SysAdmin
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>Windows Deployment Services (WDS)</li>
-    				<li>Active Directory</li>
-    				<li>Open LDAP</li>
-    				<li>Server Maintenance</li>
-    				<li>Cisco</li>
-    				<li>Mikrotik</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Mobile Development
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>Android (Java)</li>
-    				<li>NDK</li>
-    				<li>React Native</li>
-    				<li>Hybrid Apps</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Database
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>MySQL</li>
-    				<li>Oracle</li>
-    				<li>MSSQL</li>
-    				<li>Mongo</li>
-    				<li>Redis</li>
-    			</ul>
-    		</div>
-    		<div class="item">
-    			<h3 class="name">
-    				Security
-    			</h3>
-    			 			<ul class="keywords">
-    				<li>Web Security</li>
-    				<li>Network Security</li>
-    				<li>Reverse Engineering</li>
-    			</ul>
-    		</div>
-    	</section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Work Experience <span class="item-count">(7)</span></h2>
-      </header>
-    
-      <section id="work">
-        <section class="work-item">
-    
-            <input id="work-item-0" type="checkbox" class="toggle-item" checked="checked" />
-            <label for="work-item-0"></label>
-    
-    			<header>
-    				<div class="position">Server Administrator</div>
-    				<div class="company">P.A.E Co</div>
-    				<div class="date">
-    				  <span class="startDate">October 2012</span> 
-    					<span class="endDate">- December 2013</span> 
-    				</div>
-    			</header>
-    			
-         	<div class="item" id="work-item">
-            <div class="summary">
-              <p><p>Working on hosting solutions (Cpanel and OpenSource alternatives)</p></p>
-            </div>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-1" type="checkbox" class="toggle-item" />
-            <label for="work-item-1"></label>
-    
-    			<header>
-    				<div class="position">Backend Developer</div>
-    				<div class="company">IIG (Iranian Internet Group)</div>
-    				<div class="date">
-    				  <span class="startDate">February 2014</span> 
-    					<span class="endDate">- April 2014</span> 
-    				</div>
-    			</header>
-    			
-         	<div class="item" id="work-item">
-            <div class="summary">
-              <p><p>BodoFood rewrite with symfony framework. DB analytics.</p></p>
-            </div>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-    
-    			<header>
-    				<div class="position">Technical Adviser and Web Developer</div>
-    				<div class="company">RAPNA</div>
-    				<div class="date">
-    				  <span class="startDate">July 2014</span> 
-    					<span class="endDate">- October 2014</span> 
-    				</div>
-    			</header>
-    			
-         	<div class="item" id="work-item">
-            <ul class="highlights">
-                <li><p>Research about augmented reality</p></li>
-                <li><p>Develop and deploy an SMS based VAS service with a management panel</p></li>
-                <li><p>Reverse engineering native ARM binaries</p></li>
-            </ul>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-3" type="checkbox" class="toggle-item" />
-            <label for="work-item-3"></label>
-    
-    			<header>
-    				<div class="position">Hardware and Software engineer</div>
-    				<div class="company">Pendar System Fadak</div>
-    				<div class="date">
-    				  <span class="startDate">June 2015</span> 
-    					<span class="endDate">- October 2015</span> 
-    				</div>
-    			</header>
-    			
-         	<div class="item" id="work-item">
-            <div class="summary">
-              <p><p>Design, develop and setup an RFID software and hardware solution for Ahvaz waste management organization.</p></p>
-            </div>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-    
-    			<header>
-    				<div class="position">Server Administrator</div>
-    				<div class="company">Amirkabir University of Technology</div>
-    				<div class="date">
-    				  <span class="startDate">January 2014</span> 
-    					<span class="endDate">- September 2017</span> 
-    				</div>
-    			</header>
-    			
-         	<div class="item" id="work-item">
-            <ul class="highlights">
-                <li><p>Servers management for CEIT and CIC departments.</p></li>
-                <li><p>WDS and AD administrator.</p></li>
-            </ul>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-5" type="checkbox" class="toggle-item" />
-            <label for="work-item-5"></label>
-    
-    			<header>
-    				<div class="position">Co-Founder</div>
-    				<div class="company">Fandogh</div>
-    				<div class="date">
-    				  <span class="startDate">January 2014</span> 
-    					<span class="endDate">- Current</span>
-    				</div>
-    			</header>
-    			
-        	<span class="website">
-        		<a target="_blank" href="https://fandogh.org">https://fandogh.org</a>
-        	</span>      	<div class="item" id="work-item">
-            <div class="summary">
-              <p><p>CTO and Technical adviser</p></p>
-            </div>
-            <ul class="highlights">
-                <li><p>Nargil</p></li>
-                <li><p>RFConnect</p></li>
-                <li><p>EventBin</p></li>
-                <li><p>Tikio</p></li>
-                <li><p>Boofeh</p></li>
-                <li><p>Baziness</p></li>
-                <li><p>Chavosh</p></li>
-                <li><p>Shenasa SSO (AUT CIC)</p></li>
-                <li><p>Internet Captive Portal (AUT CIC)</p></li>
-                <li><p>Online TV (AUT CIC)</p></li>
-                <li><p>Ticketing System (AUT CIC)</p></li>
-            </ul>
-        	</div>
-        </section>
-        <section class="work-item">
-    
-            <input id="work-item-6" type="checkbox" class="toggle-item" />
-            <label for="work-item-6"></label>
-    
-    			<header>
-    				<div class="company">Alibaba Travels Co</div>
-    				<div class="date">
-    				  <span class="startDate">January 2018</span> 
-    					<span class="endDate">- Current</span>
-    				</div>
-    			</header>
-    			
-        	<span class="website">
-        		<a target="_blank" href="https://alibaba.ir">https://alibaba.ir</a>
-        	</span>      	<div class="item" id="work-item">
-            <div class="summary">
-              <p><p>Working with DevOps and Indra teams</p></p>
-            </div>
-        	</div>
-        </section>
-      </section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Volunteer</h2>
-      </header>
-      <section id="volunteer">
-        <section class="volunteer-item">
-    
-    
-          <header>
-            <div class="header-left">
-              <div class="position">
-                Organizer and Presenter
-              </div>
-              <div class="organization">
-                Linux Festival
-              </div>
-            </div>
-            <div class="date">
-              <span class="startDate">
-              April 2014
-              </span>
-              <span class="endDate">
-              - Current
-              </span>
-            </div>
-          </header>
-          <div class="item">
-          </div>
-        </section>
-        <section class="volunteer-item">
-    
-    
-          <header>
-            <div class="header-left">
-              <div class="position">
-                Community Partner
-              </div>
-              <div class="organization">
-                Vue.js
-              </div>
-            </div>
-            <div class="date">
-              <span class="startDate">
-              May 2017
-              </span>
-              <span class="endDate">
-              - Current
-              </span>
-            </div>
-          </header>
-          <div class="item">
-          </div>
-        </section>
-      </section>
-    </section>
-    <section class="section">
-      <header>
-        <h2 class='section-title'>Education <span class="item-count">(2)</span></h2>
-      </header>
-    
-      <section id="education">
-        <section class="education-item">
-          <header>
-            <div class="header-left">
-              <div class="studyType">
-                Bachelor
-              </div>
-              <div class="area">
-                Computer Engineering
-              </div>
-              <div class="institution">
-                Amirkabir University of Technology
-              </div>
-            </div>
-            <div class="date">
-              <span class="startDate">
-              2013
-              </span>
-              <span class="endDate">
-              - Current
-              </span>
-            </div>
-          </header>
-    
-    
-    
-          <div class="item">
-          </div>
-        </section>
-        <section class="education-item">
-          <header>
-            <div class="header-left">
-              <div class="area">
-                Tehran
-              </div>
-              <div class="institution">
-                Allameh Helli 4
-              </div>
-            </div>
-            <div class="date">
-              <span class="startDate">
-              2011
-              </span>
-              <span class="endDate">
-              - 2013
-              </span>
-            </div>
-          </header>
-    
-    
-    
-          <div class="item">
-          </div>
-        </section>
-      </section>
-    </section>
-    <section class="section margin1">
-      <header>
-        <h2 class='section-title'>Languages</h2>
-      </header>
-      <section id="languages">
-        <div class="display">
-          <h3 class="language">
-            Persian
-          </h3>
-          <div class="item">
-            <div class="level fluency native speaker">
-              <em>Native speaker</em>
-              <div class="bar"></div>
-            </div>
-          </div>
-        </div>
-        <div class="display">
-          <h3 class="language">
-            English
-          </h3>
-          <div class="item">
-          </div>
-        </div>
-      </section>
-    </section>
+  .education-listing > .highlight {
+    margin-left: 30px;
+  }
+}</style>
+  <style media="print">
+body, html {
+  background-color: white;
+  padding-top: 1.5em;
+}
 
-  </body>
+.paper {
+  width:100%;
+  border: 0;
+
+  padding-top: 0;
+}
+
+header p {
+  font-size: 1.3em;
+}
+
+.subtitle {
+  font-size: 0.7em;
+}
+
+.header-pic {
+  float:left;
+}
+
+.profiles {
+  display:none;
+}
+
+.content {
+  page-break-inside:avoid; 
+  page-break-after:auto;
+}
+
+.header-text {
+  float:left;
+  margin-top: -1.6em;
+}
+
+.content-wrapper > .content:first-child {
+  padding-top: 2em;
+}
+
+.content:last-child {
+  padding-bottom: 0;
+}
+
+.content-cat {
+  width:33%;
+  color:black;
+  text-align: left;
+}
+
+.content-cat p {
+  font-size:0.6em;
+  font-weight: 600;
+}
+
+header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
+  color:black;
+}
+
+.content-text.skills-listing > ul > li span, .subtitle {
+  color:#212121;
+}
+
+.content-text ul:last-child {
+  margin-bottom: 0.25em;
+}
+
+.content-text ul li:first-child {
+  width:50%;
+}
+
+.profiles-listing ul li:first-child {
+  width:32%;
+}
+
+div.content-text.skills-listing > ul > li {
+  width:33%;
+}
+
+.work-listing p {
+  margin-bottom: 0.1em;
+}
+
+div.content-text.skills-listing > ul > li > p {
+  margin-top: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+div.content-text.skills-listing > ul > li {
+  padding-left: 1.5em;
+}
+
+div.content-text.skills-listing > ul > li:first-child {
+  padding-left: 2em;
+}
+
+.note {
+  display:none;
+}
+
+.content-text:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.big-text {
+  padding-top: 0;
+}</style>
+</head>
+<body>
+  <div class="resume-wrapper">
+    <article class="paper">
+        <header>
+          <div class="header-content">
+              <div class="header-pic">
+                <img src="https://avatars0.githubusercontent.com/u/5158436?v=4" class="pic" />
+              </div>
+            <div class="header-text">
+              <p>
+                Pooya Parsa
+              </p>
+              <p class="subtitle">Consultant and Opensource Developer</p>
+            </div>
+          </div>
+        </header>
+        <div class="content-wrapper">
+          <!-- CONTACT -->
+          <section class="content">
+            <div class="row">
+              <div class="content-cat">
+                Contact
+              </div>
+              <div class="content-text">
+                  <ul>
+                    <li>Email</li>
+                    <li>pyapar@gmail.com</li>
+                  </ul>
+                  <ul>
+                    <li>Phone</li>
+                    <li>+31 0612 045846</li>
+                  </ul>
+              </div>
+            </div>
+          </section>
+          <!-- LOCATION -->
+              <section class="content">
+                <div class="row">
+                  <div class="content-cat">
+                    Location
+                  </div>
+                  <div class="content-text">
+                      <ul>
+                        <li>Address</li>
+                        <li>Rijksstraatweg 383-A</li>
+                      </ul>
+                        <ul>
+                          <li>Postal Code & City</li>
+                          <li>2025 DB Haarlem</li>
+                        </ul>
+                      <ul>
+                        <li>Region</li>
+                        <li>North Holland</li>
+                      </ul>
+                  </div>
+                </div>
+              </section>
+        
+                <section class="content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                        Work  Experience
+                          <p>2019-09-01 till 2019-09-01</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p style="margin-top:2.4em;">
+                          <strong>Consultant</strong>
+                          at <strong><a href="https://passionatepeople.io/">Passionate People :</a></strong>
+                        </p>
+                        <p>(till present)</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2018-01-20 till 2019-01-01</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                          <strong></strong>
+                          at <strong><a href="https://alibaba.ir">Alibaba Travels Co:</a></strong>
+                        </p>
+                        <p>Working with Devops and Indra teams</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2014-01-01 till 2019-09-01</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                          <strong>Co-Founder</strong>
+                          at <strong><a href="https://fandogh.org">Fandogh:</a></strong>
+                        </p>
+                        <p>CTO and Technical adviser</p>
+                          <p class="highlight">Nargil</p>
+                          <p class="highlight">RFConnect</p>
+                          <p class="highlight">EventBin</p>
+                          <p class="highlight">Tikio</p>
+                          <p class="highlight">Boofeh</p>
+                          <p class="highlight">Baziness</p>
+                          <p class="highlight">Chavosh</p>
+                          <p class="highlight">Shenasa SSO (AUT CIC)</p>
+                          <p class="highlight">Internet Captive Portal (AUT CIC)</p>
+                          <p class="highlight">Online TV (AUT CIC)</p>
+                          <p class="highlight">Ticketing System (AUT CIC)</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2014-01-01 till 2017-09-21</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Server Administrator</strong>
+                            at <strong>Amirkabir University of Technology:</strong>
+                        </p>
+                          <p class="highlight">Servers management for CEIT and CIC departments.</p>
+                          <p class="highlight">WDS and AD administrator.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2015-06-01 till 2015-10-01</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Hardware and Software engineer</strong>
+                            at <strong>Pendar System Fadak:</strong>
+                        </p>
+                        <p>Design, develop and setup an RFID software and hardware solution for Ahvaz waste management organization.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2014-07-01 till 2014-10-01</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Technical Adviser and Web Developer</strong>
+                            at <strong>RAPNA:</strong>
+                        </p>
+                          <p class="highlight">Research about augmented reality</p>
+                          <p class="highlight">Develop and deploy an SMS based VAS service with a management panel</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2014-02-01 till 2014-04-01</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Backend Developer</strong>
+                            at <strong>IIG (Iranian Internet Group):</strong>
+                        </p>
+                        <p>BodoFood rewrite with symfony framework. DB analytics.</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content work-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2012-10-01 till 2013-12-01</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p>
+                            <strong>Server Administrator</strong>
+                            at <strong>P.A.E Co:</strong>
+                        </p>
+                        <p>Working on hosting solutions (Cpanel and OpenSource alternatives)</p>
+                    </div>
+                  </div>
+                </section>
+
+
+                <section class="content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                        Education
+                          <p>2013-09-23 till 2019-01-28</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p class="heading" style="margin-top:2.35em;">Amirkabir University of Technology</p>
+                        <p class="highlight">
+                          Bachelor (Associate Degrees):
+                          <i>Information technology </i>
+                        </p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content education-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2012-09-22 till 2013-06-21</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p class="heading">NODET (National Organization for Development of Exceptional Talents)</p>
+                    </div>
+                  </div>
+                </section>
+                <section class="content education-content">
+                  <div class="row">
+                    <div class="content-cat big-text">
+                          <p>2009-09-23 till 2012-06-20</p>
+                    </div>
+                    <div class="content-text work-listing education-listing">
+                          <p class="heading">NODET (National Organization for Development of Exceptional Talents)</p>
+                    </div>
+                  </div>
+                </section>
+
+
+          <section class="content">
+            <div class="row">
+              <div class="content-cat">
+                Skills
+              </div>
+              <div class="content-text skills-listing">
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Web Development:
+                        </strong>
+                    </span>
+                      HTML, CSS, SASS, Javascript, React, Angular 1.x, Vue, Meteor, GraphQL, PWA
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Backend Development:
+                        </strong>
+                    </span>
+                      PHP, Python, Node.js, Java
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          DevOps :
+                        </strong>
+                    </span>
+                      Windows Server, Virtualization, ESXi, VCenter, Linux, Ubuntu, CentOS, ArchLinux, Free BSD, LXC, Docker, Apache, Nginx
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          SysAdmin:
+                        </strong>
+                    </span>
+                      Windows Deployment Services (WDS), Active Directory, Open LDAP, Server Maintenance, Cisco, Mikrotik
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Mobile Development:
+                        </strong>
+                    </span>
+                      Android (Java), NDK, React Native, Hybrid Apps
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Database:
+                        </strong>
+                    </span>
+                      MySQL, Oracle, MSSQL, Mongo, Redis
+                  </p>
+                  <p>
+                    <span class="name">
+                        <strong>
+                          Security:
+                        </strong>
+                    </span>
+                      Web Security, Network Security
+                  </p>
+              </div>
+            </div>
+          </section>
+
+  <!-- LANGUAGE -->
+            <section class="content">
+              <div class="row">
+                <div class="content-cat">
+                  Languages
+                </div>
+                <div class="content-text">
+                    <ul>
+                        <li>Persian</li>
+                        <li>Native Speaker</li>
+                    </ul>
+                    <ul>
+                        <li>English</li>
+                        <li>Fluent Speaking</li>
+                    </ul>
+                </div>
+              </div>
+            </section>
+            <!-- PROFILES -->
+              <section class="content profiles">
+                <div class="row">
+                  <div class="content-cat">
+                    Profiles
+                  </div>
+                  <div class="content-text profiles-listing">
+                    <ul>
+                          <li>
+                            <a href="https://github.com/pi0" target="_blank">
+                              Github
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://twitter.com/_pi0_" target="_blank">
+                              Twitter
+                            </a>
+                          </li>
+                          <li>
+                            <a href="https://www.linkedin.com/in/pooyaparsa/" target="_blank">
+                              LinkedIn
+                            </a>
+                          </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+
+        </div>
+    </article>
+  </div>
+</body>
 </html>

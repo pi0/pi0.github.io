@@ -1,18 +1,16 @@
 {
   "basics": {
     "name": "Pooya Parsa",
-    "label": "Full Stack Developer",
+    "label": "Consultant and Opensource Developer",
     "picture": "https://avatars0.githubusercontent.com/u/5158436?v=4",
     "email": "pyapar@gmail.com",
-    "phone": "(919) 5085164",
-    "website": "https://pi0.ir",
-    "summary": "Technical adviser and open-source enthusiast.",
+    "phone": "+31 0612 045846",
     "location": {
-      "address": "",
-      "postalCode": "",
-      "city": "Tehran",
-      "countryCode": "IR",
-      "region": "Tehran"
+      "address": "Rijksstraatweg 383-A",
+      "postalCode": "2025 DB",
+      "city": "Haarlem",
+      "countryCode": "NL",
+      "region": "North Holland"
     },
     "profiles": [
       {
@@ -29,73 +27,34 @@
         "network": "LinkedIn",
         "username": "pooyaparsa",
         "url": "https://www.linkedin.com/in/pooyaparsa/"
-      },
-      {
-        "network": "Telegram",
-        "username": "pooyaparsa",
-        "url": "https://t.me/pooyaparsa"
       }
     ]
   },
   "work": [
     {
-      "company": "P.A.E Co",
-      "position": "Server Administrator",
-      "website": "",
-      "startDate": "2012-10-01",
-      "endDate": "2013-12-01",
-      "summary": "Working on hosting solutions (Cpanel and OpenSource alternatives)",
+      "company": "Passionate People ",
+      "position": "Consultant",
+      "website": "https://passionatepeople.io/",
+      "startDate": "2019-09-01",
+      "endDate": "2019-09-01",
+      "summary": "(till present)",
       "highlights": []
     },
     {
-      "company": "IIG (Iranian Internet Group)",
-      "position": "Backend Developer",
-      "website": "",
-      "startDate": "2014-02-01",
-      "endDate": "2014-04-01",
-      "summary": "BodoFood rewrite with symfony framework. DB analytics.",
+      "company": "Alibaba Travels Co",
+      "position": "",
+      "website": "https://alibaba.ir",
+      "startDate": "2018-01-20",
+      "endDate": "2019-01-01",
+      "summary": "Working with Devops and Indra teams",
       "highlights": []
-    },
-    {
-      "company": "RAPNA",
-      "position": "Technical Adviser and Web Developer",
-      "website": "",
-      "startDate": "2014-07-01",
-      "endDate": "2014-10-01",
-      "summary": "",
-      "highlights": [
-        "Research about augmented reality",
-        "Develop and deploy an SMS based VAS service with a management panel",
-        "Reverse engineering native ARM binaries"
-      ]
-    },
-    {
-      "company": "Pendar System Fadak",
-      "position": "Hardware and Software engineer",
-      "website": "",
-      "startDate": "2015-06-01",
-      "endDate": "2015-10-01",
-      "summary": "Design, develop and setup an RFID software and hardware solution for Ahvaz waste management organization.",
-      "highlights": []
-    },
-    {
-      "company": "Amirkabir University of Technology",
-      "position": "Server Administrator",
-      "website": "",
-      "startDate": "2014-01-01",
-      "endDate": "2017-09-21",
-      "summary": "",
-      "highlights": [
-        "Servers management for CEIT and CIC departments.",
-        "WDS and AD administrator."
-      ]
     },
     {
       "company": "Fandogh",
       "position": "Co-Founder",
       "website": "https://fandogh.org",
       "startDate": "2014-01-01",
-      "endDate": "",
+      "endDate": "2019-09-01",
       "summary": "CTO and Technical adviser",
       "highlights": [
         "Nargil",
@@ -111,52 +70,84 @@
         "Ticketing System (AUT CIC)"
       ]
     },
-      {
-        "company": "Alibaba Travels Co",
-        "position": "",
-        "website": "https://alibaba.ir",
-        "startDate": "2018-01-20",
-        "endDate": "",
-        "summary": "Working with DevOps and Indra teams",
-        "highlights": []
-      }
-  ],
-  "volunteer": [
     {
-      "organization": "Linux Festival",
-      "position": "Organizer and Presenter",
+      "company": "Amirkabir University of Technology",
+      "position": "Server Administrator",
       "website": "",
-      "startDate": "2014-04-30",
-      "endDate": "",
+      "startDate": "2014-01-01",
+      "endDate": "2017-09-21",
       "summary": "",
+      "highlights": [
+        "Servers management for CEIT and CIC departments.",
+        "WDS and AD administrator."
+      ]
+    },
+    {
+      "company": "Pendar System Fadak",
+      "position": "Hardware and Software engineer",
+      "website": "",
+      "startDate": "2015-06-01",
+      "endDate": "2015-10-01",
+      "summary": "Design, develop and setup an RFID software and hardware solution for Ahvaz waste management organization.",
       "highlights": []
     },
     {
-      "organization": "Vue.js",
-      "position": "Community Partner",
+      "company": "RAPNA",
+      "position": "Technical Adviser and Web Developer",
       "website": "",
-      "startDate": "2017-05-30",
-      "endDate": "",
+      "startDate": "2014-07-01",
+      "endDate": "2014-10-01",
       "summary": "",
+      "highlights": [
+        "Research about augmented reality",
+        "Develop and deploy an SMS based VAS service with a management panel"
+      ]
+    },
+    {
+      "company": "IIG (Iranian Internet Group)",
+      "position": "Backend Developer",
+      "website": "",
+      "startDate": "2014-02-01",
+      "endDate": "2014-04-01",
+      "summary": "BodoFood rewrite with symfony framework. DB analytics.",
+      "highlights": []
+    },
+    {
+      "company": "P.A.E Co",
+      "position": "Server Administrator",
+      "website": "",
+      "startDate": "2012-10-01",
+      "endDate": "2013-12-01",
+      "summary": "Working on hosting solutions (Cpanel and OpenSource alternatives)",
       "highlights": []
     }
   ],
+  "volunteer": [],
   "education": [
     {
       "institution": "Amirkabir University of Technology",
-      "area": "Computer Engineering",
-      "studyType": "Bachelor",
-      "startDate": "2013-12-23",
-      "endDate": "",
+      "area": "Information technology",
+      "studyType": "Bachelor (Associate Degrees)",
+      "startDate": "2013-09-23",
+      "endDate": "2019-01-28",
       "gpa": "",
       "courses": []
     },
     {
-      "institution": "Allameh Helli 4",
-      "area": "Tehran",
-      "studyType": "",
-      "startDate": "2011-01-01",
-      "endDate": "2013-09-01",
+      "institution": "NODET (National Organization for Development of Exceptional Talents)",
+      "area": "",
+      "studyType": "Mathematical Sciences",
+      "startDate": "2012-09-22",
+      "endDate": "2013-06-21",
+      "gpa": "",
+      "courses": []
+    },
+    {
+      "institution": "NODET (National Organization for Development of Exceptional Talents)",
+      "area": "",
+      "studyType": "Mathematics and Physics",
+      "startDate": "2009-09-23",
+      "endDate": "2012-06-20",
       "gpa": "",
       "courses": []
     }
@@ -247,19 +238,18 @@
       "level": "",
       "keywords": [
         "Web Security",
-        "Network Security",
-        "Reverse Engineering"
+        "Network Security"
       ]
     }
   ],
   "languages": [
     {
       "language": "Persian",
-      "fluency": "Native speaker"
+      "fluency": "Native Speaker"
     },
     {
       "language": "English",
-      "fluency": ""
+      "fluency": "Fluent Speaking"
     }
   ],
   "interests": [],
